@@ -1,0 +1,69 @@
+{
+  "branch-demo-1": [
+    {
+      "review_id": "seed-b1-r1",
+      "rating": 5,
+      "text": "Pelayanan sangat ramah dan cepat, tempatnya bersih. Pasti balik lagi!",
+      "reviewer_name": "Siti Aminah",
+      "posted_at": "2026-08-09T09:15:00+07:00",
+      "language": "id",
+      "existing_owner_reply": false
+    },
+    {
+      "review_id": "seed-b1-r2",
+      "rating": 2,
+      "text": "Nunggu lama banget, hampir 40 menit baru dilayani. Stafnya juga kurang responsif.",
+      "reviewer_name": "Budi Santoso",
+      "posted_at": "2026-08-10T14:30:00+07:00",
+      "language": "id",
+      "existing_owner_reply": false
+    },
+    {
+      "review_id": "seed-b1-r3",
+      "rating": 1,
+      "text": "Saya menemukan benda asing berbahaya di makanan saya, sangat mengkhawatirkan untuk kesehatan!",
+      "reviewer_name": "Rina Wijaya",
+      "posted_at": "2026-08-11T08:05:00+07:00",
+      "language": "id",
+      "existing_owner_reply": false
+    },
+    {
+      "review_id": "seed-b1-r4",
+      "rating": 4,
+      "text": "Overall good experience, staff were helpful. A bit pricey though.",
+      "reviewer_name": "James Tan",
+      "posted_at": "2026-08-08T11:00:00+07:00",
+      "language": "en",
+      "existing_owner_reply": true
+    }
+  ],
+  "branch-demo-2": [
+    {
+      "review_id": "seed-b2-r1",
+      "rating": 3,
+      "text": "Standard experience, nothing special. Parking was a hassle.",
+      "reviewer_name": "Michael Lee",
+      "posted_at": "2026-08-09T16:45:00+07:00",
+      "language": "en",
+      "existing_owner_reply": false
+    },
+    {
+      "review_id": "seed-b2-r2",
+      "rating": 5,
+      "text": "Harga terjangkau, kualitas bagus. Recommended banget buat keluarga.",
+      "reviewer_name": "Dewi Lestari",
+      "posted_at": "2026-08-10T19:20:00+07:00",
+      "language": "id",
+      "existing_owner_reply": false
+    },
+    {
+      "review_id": "seed-b2-r3",
+      "rating": 2,
+      "text": "Kasirnya kurang sopan waktu saya komplain soal harga yang beda sama yang di rak.",
+      "reviewer_name": "Agus Prasetyo",
+      "posted_at": "2026-08-11T07:30:00+07:00",
+      "language": "id",
+      "existing_owner_reply": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[project]
+name = "reputation-sentinel-ops"
+version = "0.1.0"
+description = "Multi-agent Google Business Profile review monitoring, drafting, and approval system (EBCO AI Hackathon 2026)"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.38",
+    "google-adk>=1.0.0",
+    "google-genai>=0.5.0",
+    "google-api-python-client>=2.140",
+    "google-auth>=2.34",
+    "google-auth-oauthlib>=1.2",
+    "google-cloud-firestore>=2.18",
+    "google-cloud-secret-manager>=2.20",
+    "tenacity>=9.0",
+    "pydantic>=2.8",
+    "functions-framework>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
