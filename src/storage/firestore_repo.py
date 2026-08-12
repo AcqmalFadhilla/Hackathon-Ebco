@@ -193,10 +193,12 @@ class FirestoreRepository(Repository):
         self._client.collection("draft_replies").document(draft.draft_id).set(draft.to_dict())
 
     def get_active_draft(self, review_id: str) -> DraftReply | None:
+        # Ordered by created_at, not draft_id — draft_id is a random UUID, not chronological,
+        # so ordering by it would silently pick an arbitrary draft instead of the latest one.
         query = (
             self._client.collection("draft_replies")
             .where("review_id", "==", review_id)
-            .order_by("draft_id", direction=self._firestore.Query.DESCENDING)
+            .order_by("created_at", direction=self._firestore.Query.DESCENDING)
             .limit(1)
         )
         docs = list(query.stream())
