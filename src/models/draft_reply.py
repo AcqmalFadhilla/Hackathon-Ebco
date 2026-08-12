@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from enum import Enum
 
 
@@ -31,7 +31,7 @@ class DraftReply:
     approved_at: datetime | None = None
     publication_state: PublicationState = PublicationState.NOT_SUBMITTED
     edit_distance: int | None = None  # SC-006 instrumentation
-    created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    created_at: datetime = field(default_factory=lambda: datetime.now(UTC))
 
     def to_dict(self) -> dict:
         return {
@@ -57,5 +57,5 @@ class DraftReply:
             approved_at=data.get("approved_at"),
             publication_state=PublicationState(data.get("publication_state", "not_submitted")),
             edit_distance=data.get("edit_distance"),
-            created_at=data.get("created_at") or datetime.now(timezone.utc),
+            created_at=data.get("created_at") or datetime.now(UTC),
         )

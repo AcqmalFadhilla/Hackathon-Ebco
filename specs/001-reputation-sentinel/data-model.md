@@ -66,6 +66,7 @@ An AI-generated candidate response to a Review.
 | `approved_at` | timestamp, nullable | |
 | `publication_state` | enum: `not_submitted` \| `pending` \| `approved` \| `rejected`, nullable | Tracks the external reply-moderation outcome checked per FR-013 |
 | `edit_distance` | integer, nullable | Difference between generated `content` and the manager-approved final text; recorded at approval time to measure SC-006 |
+| `created_at` | timestamp | Added 2026-08-12 (deploy fix) — used to find the *latest* draft for a review (`get_active_draft`). `draft_id` is a random UUID, not chronological, so it can't be used for that ordering; Firestore needs a composite index on `(review_id, created_at)` for this query. |
 
 ## Branch Health Score
 
